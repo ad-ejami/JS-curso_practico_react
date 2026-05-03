@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from '@containers/Layout';
 import Home from '@pages/Home';
 import Login from '@pages/Login';
@@ -18,23 +18,23 @@ import '@styles/global.css';
 const App = () => {
 	const initialState = useInititalState();
 	return (
-		<AppContext.Provider 
+		<AppContext.Provider
 		value={initialState}
 		>
 			<BrowserRouter>
 				<Layout>
-					<Switch>
-						<Route exact path="/" component={Home} />
-						<Route exact path="/login" component={Login} />
-						<Route exact path="/password-recovery" component={PasswordRecovery} />
-						<Route exact path="/send-email" component={SendEmail} />
-						<Route exact path="/new-password" component={NewPassword} />
-						<Route exact path="/account" component={MyAccount} />
-						<Route exact path="/signup" component={CreateAccount} />
-						<Route exact path="/checkout" component={Checkout} />
-						<Route exact path="/orders" component={Orders} />
-						<Route path="*" component={NotFound} />
-					</Switch>
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/login" element={<Login />} />
+						<Route path="/password-recovery" element={<PasswordRecovery />} />
+						<Route path="/send-email" element={<SendEmail />} />
+						<Route path="/new-password" element={<NewPassword />} />
+						<Route path="/account" element={<MyAccount />} />
+						<Route path="/signup" element={<CreateAccount />} />
+						<Route path="/checkout" element={<Checkout />} />
+						<Route path="/orders" element={<Orders />} />
+						<Route path="*" element={<NotFound />} />
+					</Routes>
 				</Layout>
 			</BrowserRouter>
 		</AppContext.Provider>
