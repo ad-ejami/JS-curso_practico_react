@@ -1,11 +1,11 @@
 import React from 'react';
 import ProductList from '@containers/ProductList';
 
-const Home = () => {
+const Home = (): React.JSX.Element => {
   return (
     <>
-			<ProductList />
-		</>
+      <ProductList />
+    </>
   );
 };
 
