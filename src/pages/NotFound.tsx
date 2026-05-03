@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/NotFound.scss'
+import '../styles/NotFound.scss';
 
-const NotFound = () => {
+const NotFound = (): React.JSX.Element => {
   return (
     <div className="not-found">
       <h1>Error 404</h1>
