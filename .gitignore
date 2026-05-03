@@ -1,3 +1,6 @@
 /node_modules
 .vscode
 curso-frontend-developer-practico/
+CLAUDE.md
+pnpm-debug.log*
+dist/
